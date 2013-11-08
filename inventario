@@ -1,0 +1,192 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using proyectoMantenimiento.Negocio;
+using dbMantenimientoBiz;
+
+namespace proyectoMantenimiento.Presentacion
+{
+    public partial class PInventario : Form
+    {
+        private int id_prov;
+        private int id_material;
+        private string id_comp;
+        private NInventario negocio;
+        public PInventario()
+        {
+            InitializeComponent();
+            negocio = new NInventario();
+            cargar_combos();
+        }
+
+        private void PInventario_Load(object sender, EventArgs e)
+        {
+            cargar_proveedor();
+            id_prov = 0;
+            id_material = 0;
+            id_comp = "";
+            edtTelfP.Text = "";
+            cargar_combos();
+            cargar_comp();
+            cargar_proveedor();
+            cargar_material();
+        }
+
+        public void limpiar_proveedor()
+        {
+            edtContactoP.Text = "";
+            edtDirP.Text = "";
+            edtNombreP.Text = "";
+            edtTelfP.Text = "";
+            id_prov = 0;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiar_proveedor();
+        }
+
+        private void cargar_proveedor()
+        {
+            dgvProv.DataSource = negocio.lista_prov();
+            dgvProv.Columns["id"].Visible=false;
+            dgvProv.Columns["estado"].Visible=false;
+        }
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if(id_prov!=0){
+                negocio.modificar_proveedor(id_prov,edtNombreP.Text, edtContactoP.Text, edtDirP.Text, edtTelfP.Text);
+            }else{
+                negocio.insertar_proveedor(edtNombreP.Text, edtContactoP.Text, edtDirP.Text, edtTelfP.Text);
+            }
+            
+            cargar_proveedor();
+            limpiar_proveedor();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if(id_prov!=0){
+                negocio.eliminar_proveedor(id_prov);
+                cargar_proveedor();
+                limpiar_proveedor();
+            }
+            
+        }
+
+        private void dgvProv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dgvProv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id_prov = (int)dgvProv.CurrentRow.Cells[0].Value;
+            proveedor p = negocio.buscar_p(id_prov);
+            edtNombreP.Text = p.empresa;
+            edtContactoP.Text = p.contacto;
+            edtDirP.Text = p.direccion;
+            edtTelfP.Text = p.telefono;
+        }
+
+        private void btnAddM_Click(object sender, EventArgs e)
+        {
+            proveedor p= (proveedor)cbxProv1.SelectedItem;
+            if(id_material!=0){
+
+                negocio.modificar_material(id_material, edtNombreM.Text, edtMarcaM.Text, p.id,Convert.ToDouble(edtPrecioM.Text));
+            }else{
+                negocio.insertar_material(edtNombreM.Text, edtMarcaM.Text, p.id, Convert.ToDouble(edtPrecioM.Text));
+            }
+            limpiar_material();
+            cargar_material();
+
+        }
+
+        public void limpiar_material()
+        {
+            id_material = 0;
+            edtMarcaM.Text = "";
+            edtNombreM.Text = "";
+            edtPrecioM.Text = "";
+            cbxProv1.SelectedItem = "";
+        }
+
+        public void cargar_material()
+        {
+            dgvMat.DataSource = negocio.lista_material();
+            dgvMat.Columns["id"].Visible = false;
+            dgvMat.Columns["estado"].Visible = false;
+        }
+
+        public void cargar_combos()
+        {
+            cbxProv1.DataSource = negocio.lista_prov();
+            cbxProv2.DataSource = negocio.lista_prov();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            cargar_combos();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddC_Click(object sender, EventArgs e)
+        {
+            proveedor p = (proveedor)cbxProv1.SelectedItem;
+            if (id_comp != "")
+            {
+
+                negocio.modificar_componente(id_comp, edtNombreC.Text, edtMarcaC.Text, p.id);
+            }
+            else
+            {
+                negocio.insertar_componente(edtCodC.Text, edtNombreC.Text, edtMarcaC.Text, p.id);
+            }
+            limpiar_comp();
+            cargar_comp();
+        }
+
+        public void limpiar_comp(){
+            edtMarcaC.Text = "";
+            edtNombreC.Text = "";
+            edtCodC.Text = "";
+            cbxProv2.SelectedItem = null;
+        }
+        public void cargar_comp()
+        {
+            dgvComp.DataSource = negocio.lista_componente();
+         //   dgvComp.Columns["id"].Visible = false;
+            dgvComp.Columns["estado"].Visible = false;
+        }
+
+        private void dgvComp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           String idc = (String)dgvComp.CurrentRow.Cells[0].Value;
+            componente c= negocio.buscar_c(idc);
+            edtCodC.Text=c.id;
+            edtMarcaC.Text = c.marca;
+                edtNombreC.Text=c.nombre;
+                cbxProv2.SelectedItem = c.proveedor;
+        }
+    }
+}
