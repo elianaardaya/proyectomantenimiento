@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.0.9466</ProductVersion>
+    <SchemaVersion>1.0</SchemaVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>dbMantenimientoBiz</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>dbMantenimientoBiz</RootNamespace>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <ProjectGuid>{5FD8C3E2-B778-4A11-881D-A0C7CC94CC74}</ProjectGuid>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OrmLib">
+      <Name>OrmLib</Name>
+      <HintPath>OrmLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aprobacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="componente.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="detalleComponente.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="detalle_reparo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\Business.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\Collections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\DataManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\DataSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\FetchPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\JoinPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\Lookups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\StoredProcedures.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\Tables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="do_not_edit\Templates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="empresa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="funcion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="inventario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="linea_produccion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="maquina.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="materialusado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="material_herramienta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="privilegio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="problema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="proveedor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="recomendacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="solicitud.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="do_not_edit\88766004-81F4-488F-8E97-F97894901ABC-503619-943597.xml">
+      <SubType>Code</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

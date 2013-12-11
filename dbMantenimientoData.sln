@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dbMantenimientoBiz", "dbMantenimientoBiz\dbMantenimientoBiz.csproj", "{EF9ADFD9-C4AA-464B-B4DD-1F48E1BCE121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{1E01B2DE-02CF-4A34-9CC7-9CEC893842CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EF9ADFD9-C4AA-464B-B4DD-1F48E1BCE121}.Debug.ActiveCfg = Debug|.NET
+		{EF9ADFD9-C4AA-464B-B4DD-1F48E1BCE121}.Debug.Build.0 = Debug|.NET
+		{EF9ADFD9-C4AA-464B-B4DD-1F48E1BCE121}.Release.ActiveCfg = Release|.NET
+		{EF9ADFD9-C4AA-464B-B4DD-1F48E1BCE121}.Release.Build.0 = Release|.NET
+		{1E01B2DE-02CF-4A34-9CC7-9CEC893842CA}.Debug.ActiveCfg = Debug|.NET
+		{1E01B2DE-02CF-4A34-9CC7-9CEC893842CA}.Debug.Build.0 = Debug|.NET
+		{1E01B2DE-02CF-4A34-9CC7-9CEC893842CA}.Release.ActiveCfg = Release|.NET
+		{1E01B2DE-02CF-4A34-9CC7-9CEC893842CA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

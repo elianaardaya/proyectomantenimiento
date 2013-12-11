@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E37237F9-652A-4816-9EA5-BD9B26BC27E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>proyectoMantenimiento</RootNamespace>
+    <AssemblyName>proyectoMantenimiento</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OrmLib">
+      <HintPath>..\dbMantenimientoBiz\OrmLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Negocio\NEmpresa.cs" />
+    <Compile Include="Negocio\NInventario.cs" />
+    <Compile Include="Negocio\NLineaP.cs" />
+    <Compile Include="Negocio\NMantenimiento.cs" />
+    <Compile Include="Negocio\NMaquina.cs" />
+    <Compile Include="Negocio\NRol.cs" />
+    <Compile Include="Negocio\NSolicitud.cs" />
+    <Compile Include="Negocio\NUsuario.cs" />
+    <Compile Include="Presentacion\FConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FConfig.Designer.cs">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FListaComponente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FListaComponente.Designer.cs">
+      <DependentUpon>FListaComponente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FListaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FListaMaterial.Designer.cs">
+      <DependentUpon>FListaMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PGestorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PGestorUsuario.Designer.cs">
+      <DependentUpon>PGestorUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PInicioSesion.Designer.cs">
+      <DependentUpon>PInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PInventario.Designer.cs">
+      <DependentUpon>PInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PMantenimiento.Designer.cs">
+      <DependentUpon>PMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PProceso.Designer.cs">
+      <DependentUpon>PProceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PReporte.Designer.cs">
+      <DependentUpon>PReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PSolicitudes.Designer.cs">
+      <DependentUpon>PSolicitudes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\VisorReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\VisorReporte.Designer.cs">
+      <DependentUpon>VisorReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\FConfig.resx">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FListaComponente.resx">
+      <DependentUpon>FListaComponente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FListaMaterial.resx">
+      <DependentUpon>FListaMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PGestorUsuario.resx">
+      <DependentUpon>PGestorUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PInicioSesion.resx">
+      <DependentUpon>PInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PInventario.resx">
+      <DependentUpon>PInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PMantenimiento.resx">
+      <DependentUpon>PMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PProceso.resx">
+      <DependentUpon>PProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PReporte.resx">
+      <DependentUpon>PReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PSolicitudes.resx">
+      <DependentUpon>PSolicitudes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\VisorReporte.resx">
+      <DependentUpon>VisorReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dbMantenimientoBiz\dbMantenimientoBiz.csproj">
+      <Project>{5FD8C3E2-B778-4A11-881D-A0C7CC94CC74}</Project>
+      <Name>dbMantenimientoBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reportes\Reportes.csproj">
+      <Project>{F932611D-C8A1-4910-BBCC-D23F944ABEA8}</Project>
+      <Name>Reportes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
